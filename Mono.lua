@@ -27,20 +27,20 @@ project "Mono"
 
 	filter "system:windows" {
 		systemversion "latest"
-    }
+	}
 
 	filter "configurations:Debug" {
 		runtime "Debug",
 		symbols "on",
-        links {
-            "%{Library.Dbg.Mono}"
-        }
-    }
+		links {
+			"%{Library.Dbg.Mono}"
+		}
+	}
 
 	filter "configurations:Release" {
 		runtime  "Release",
 		optimize "on",
-        links {
-            "%{Library.Rel.Mono}"
-        }
-    }
+		links {
+			"%{Library.Rel.Mono}"
+		}
+	}
