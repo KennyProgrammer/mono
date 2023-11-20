@@ -1,7 +1,10 @@
 --
 -- Main Premake5 file for building Mono project.
--- Copyright (c) 2020-2022 by Danil (Kenny) Dukhovenko, All rights reserved.
+-- Copyright (c) 2020-2023 by Danil (Kenny) Dukhovenko, All rights reserved.
 -- 
+-- Requirement:
+--  - ForceEngine.lua
+--
 -- mono-2.0-sgen.dll can be found in MonoSDK or in Force binaries.
 --
 
