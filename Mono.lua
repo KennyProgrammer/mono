@@ -25,21 +25,22 @@ project "Mono"
 		"include/mono-2.0"
 	}
 
-	filter "system:windows"
+	filter "system:windows" {
 		systemversion "latest"
+    }
 
-	filter "configurations:Debug"
-		runtime "Debug"
-		symbols "on"
-
+	filter "configurations:Debug" {
+		runtime "Debug",
+		symbols "on",
         links {
             "%{Library.Dbg.Mono}"
         }
+    }
 
-	filter "configurations:Release"
-		runtime  "Release"
-		optimize "on"
-
+	filter "configurations:Release" {
+		runtime  "Release",
+		optimize "on",
         links {
             "%{Library.Rel.Mono}"
         }
+    }
