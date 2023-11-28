@@ -14,8 +14,8 @@ project "Mono"
 	language      "C++"
 	cppdialect    "C++11"
 	staticruntime "on"
-	targetdir     ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/lib")
-	objdir        ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/obj")
+	targetdir     ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/Lib")
+	objdir        ("%{ForceDir.BinLib}/" .. BuildDir .. "/%{prj.name}/Obj")
 
 	files {
 		"include/mono-2.0/mono/**.h",
@@ -26,22 +26,19 @@ project "Mono"
 		"include/mono-2.0"
 	}
 
-	filter "system:windows" {
+	filter "system:windows" 
 		systemversion "latest"
-	}
 
-	filter "configurations:Debug" {
-		runtime "Debug",
-		symbols "on",
+	filter "configurations:Debug" 
+		runtime "Debug"
+		symbols "on"
 		links {
 			"%{Library.Dbg.Mono}"
 		}
-	}
 
-	filter "configurations:Release" {
-		runtime  "Release",
-		optimize "on",
+	filter "configurations:Release" 
+		runtime  "Release"
+		optimize "on"
 		links {
 			"%{Library.Rel.Mono}"
 		}
-	}
