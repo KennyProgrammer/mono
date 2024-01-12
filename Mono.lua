@@ -28,7 +28,7 @@ project "Mono"
 	}
 
 	includedirs {
-		"%{IncludeDir.Vulkan}"
+		"%{IncludeDir.Mono}"
 	}
 
 	filter "system:windows" 
