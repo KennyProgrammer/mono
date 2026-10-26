@@ -4,7 +4,7 @@
 // with linkage of mono-2.0-sgen.lib.
 //
 
-#include "mono/mini/jit.h"
+#include "mono/jit/jit.h"
 #include "mono/metadata/appdomain.h"
 #include "mono/metadata/assembly.h"
 #include "mono/metadata/class.h"
